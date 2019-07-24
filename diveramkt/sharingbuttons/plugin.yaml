@@ -1,0 +1,6 @@
+plugin:
+    name: 'diveramkt.sharingbuttons::lang.plugin.name'
+    description: 'diveramkt.sharingbuttons::lang.plugin.description'
+    author: DiveraMkt
+    icon: oc-icon-share-alt
+    homepage: ''

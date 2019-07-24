@@ -1,0 +1,25 @@
+<ul>
+	{% if __SELF__.facebook %}
+	<li>
+		<a href="javascript:void(0)" onclick="window.open( 'http://www.facebook.com/sharer.php?u={{ ''|page }}', 'sharer', 'toolbar=0, status=0, width=626, height=436');return false;" title="Compartilhar no Facebook"><i class="fa fa-facebook"></i></a>
+	</li>
+	{% endif %}
+
+	{% if __SELF__.twitter %}
+	<li>
+		<a href="javascript:void(0)" onclick="window.open( 'http://www.twitter.com/share?text={{ post.title }}&url={{ ''|page }}&via=fredecs', 'sharer', 'toolbar=0, status=0, width=626, height=436');return false;" title="Compartilhar no Twitter"><i class="fa fa-twitter"></i></a>
+	</li>
+	{% endif %}
+
+	{% if __SELF__.linkedin %}
+	<li>
+		<a href="javascript:void(0)" onclick="window.open( 'https://www.linkedin.com/shareArticle?mini=true&url={{ ''|page }}&title={{ post.title }}&summary={{ post.summary }}&source=Empresa', 'sharer', 'toolbar=0, status=0, width=626, height=436');return false;" title="Compartilhar no LinkedIn"><i class="fa fa-linkedin"></i></a>
+	</li>
+	{% endif %}
+
+	{% if __SELF__.pinterest %}
+	<li>
+		<a href="javascript:void(0)" onclick="window.open( 'https://pinterest.com/pin/create/button/?url={{ ''|page }}&media={{ post.featured_images[0].path|resize(800) }}&description={{ post.title }} - {{ post.summary }}', 'sharer', 'toolbar=0, status=0, width=626, height=436');return false;" title="Compartilhar no Pinterest"><i class="fa fa-pinterest"></i></a>
+	</li>
+	{% endif %}
+</ul>
